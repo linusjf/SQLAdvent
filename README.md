@@ -10,6 +10,10 @@
 
  `sqlite3 advent.db`
 
+3. Execute sql files with command:
+
+  `sqlite3 advent.db < <sqlfilename>`
+
 ## Day 1 of SQL Advent Calendar
 
 **Today's Question:**
