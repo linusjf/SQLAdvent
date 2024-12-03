@@ -8,7 +8,7 @@
 
 2. Create sqlite database with command:
 
- `sqlite3 advent`
+ `sqlite3 advent.db`
 
 ## Day 1 of SQL Advent Calendar
 
