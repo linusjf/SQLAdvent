@@ -1,4 +1,3 @@
-```
 -- Create the gifts table
 CREATE TABLE gifts (
   gift_name TEXT NOT NULL,
@@ -13,4 +12,3 @@ VALUES
   ('Chocolate Box', 'Alice', 0.8),
   ('Teddy Bear', 'Sophia', 1.2),
   ('Board Game', 'Liam', 0.9);
-```

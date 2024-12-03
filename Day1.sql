@@ -1,4 +1,3 @@
-```
 -- Create the rentals table
 CREATE TABLE rentals (
   rental_id INTEGER PRIMARY KEY,
@@ -18,4 +17,3 @@ VALUES
   (4, 'Sarah', 'Skiing', '2024-01-01'),
   (5, 'Michael', 'Skiing', '2024-01-02'),
   (6, 'Michael', 'Snowtubing', '2024-01-02');
-```
