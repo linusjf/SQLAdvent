@@ -1,12 +1,13 @@
+drop table if exists rentals;
 -- Create the rentals table
-CREATE TABLE rentals (
+CREATE TABLE if not exists rentals (
   rental_id INTEGER PRIMARY KEY,
   customer_name TEXT NOT NULL,
   activity TEXT NOT NULL,
   rental_date DATE NOT NULL
 );
 
-CREATE INDEX idx_customer_name ON rentals (customer_name);
+CREATE INDEX if not exists idx_customer_name ON rentals (customer_name);
 
 -- Insert row records into the rentals table
 INSERT INTO rentals (rental_id, customer_name, activity, rental_date)

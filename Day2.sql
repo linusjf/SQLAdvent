@@ -1,5 +1,7 @@
+drop table if exists gifts;
+
 -- Create the gifts table
-CREATE TABLE gifts (
+CREATE TABLE if not exists gifts (
   gift_name TEXT NOT NULL,
   recipient TEXT NOT NULL,
   weight_kg REAL NOT NULL
