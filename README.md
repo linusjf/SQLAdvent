@@ -71,6 +71,10 @@
 
 **Level of difficulty:** *Hard*
 
+**References:**
+
+1. <https://stackoverflow.com/questions/9232470/performance-rank-vs-sub-query-sub-query-have-lower-cost>
+
 ## Day 4 of SQL Advent Calendar
 
 **Today's Question:**
