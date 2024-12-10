@@ -13,8 +13,8 @@ CREATE TABLE menu (
   dish_id INTEGER PRIMARY KEY AUTOINCREMENT,
   dish_name TEXT NOT NULL,
   event_id INTEGER NOT NULL,
-  calories INTEGER NOT NULL,
-  weight_g INTEGER NOT NULL,
+  calories REAL NOT NULL,
+  weight_g REAL NOT NULL,
   FOREIGN KEY (event_id) REFERENCES events (event_id)
 );
 
