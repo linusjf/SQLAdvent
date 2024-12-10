@@ -24,8 +24,8 @@ FROM (
     events ON menu.event_id = events.event_id
 )
 WHERE
-  row_num <= 2;
-with dishes as (SELECT
+  row_num <= 3;
+WITH dishes AS (SELECT
     dish_name,
     event_name,
     round(calories / weight_g,2) AS calorie_density,
@@ -35,5 +35,5 @@ with dishes as (SELECT
   JOIN
     events ON menu.event_id = events.event_id
 )
-select dish_name, event_name, calorie_density from
-(select * from dishes where row_num <= 2);
+SELECT dish_name, event_name, calorie_density FROM
+(SELECT * FROM dishes WHERE row_num <= 3);
