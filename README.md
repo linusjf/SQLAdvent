@@ -281,6 +281,7 @@
 **Table name:** *figurines*
 
 | figurine_id |	globe_id |	figurine_type |
+| -- | -- | -- |
 | 1 | 1 |	Snowman |
 | 2 | 1 |	Tree |
 | 3 | 2 |	Santa Claus |
