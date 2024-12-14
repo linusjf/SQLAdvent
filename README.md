@@ -313,3 +313,19 @@
 | 4 |	Board Game |	John |	0.9 |
 
 **Level of difficulty:** *Medium*
+
+## Day 14 of SQL Advent Calendar
+
+**Today's Question:**
+
+*Which ski resorts had snowfall greater than 50 inches?*
+
+**Table name:** *snowfall*
+
+| resort_name |	location |	snowfall_inches |
+| -- | -- | -- |
+| Snowy Peaks |	Colorado |	60 |
+| Winter Wonderland |	Utah |	45 |
+| Frozen Slopes |	Alaska |	75 |
+
+**Level of difficulty:** *Easy*
