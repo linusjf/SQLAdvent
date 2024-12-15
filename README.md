@@ -303,7 +303,7 @@
 
 *We need to make sure Santa's sleigh is properly balanced. Find the total weight of gifts for each recipient.*
 
-**Table name:** *gifts*
+**Table name:** *presents*
 
 | gift_id |	gift_name |	recipient |	weight_kg |
 | -- | -- | -- | -- |
@@ -320,7 +320,7 @@
 
 *Which ski resorts had snowfall greater than 50 inches?*
 
-**Table name:** *snowfall*
+**Table name:** *snow*
 
 | resort_name |	location |	snowfall_inches |
 | -- | -- | -- |
