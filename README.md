@@ -336,10 +336,10 @@
 
 *A family reunion is being planned, and the organizer wants to identify the three family members with the most children. Write a query to calculate the total number of children for each parent and rank them. Include the parent’s name and their total number of children in the result.*
 
-**Table name:** *family_members*
+**Table name:** *family*
 
 | member_id | name | age |
-| -- | -- | -- | -- |
+| -- | -- | -- |
 | 1 | Alice | 30 |
 | 2 | Bob |	58 |
 | 3 | Charlie | 33 |
