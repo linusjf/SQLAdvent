@@ -442,7 +442,7 @@
 
 *Scientists are studying the diets of polar bears. Write a query to find the maximum amount of food (in kilograms) consumed by each polar bear in a single meal December 2024. Include the bear_name and biggest_meal_kg, and sort the results in descending order of largest meal consumed.*
 
-**Table name:** *polar_bears*
+**Table name:** *bears*
 
 | bear_id | bear_name | age |
 |----------|------------|-----|
