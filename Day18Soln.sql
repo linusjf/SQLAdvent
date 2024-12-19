@@ -7,8 +7,7 @@ WITH ActivityAverage AS (
         activities a
     JOIN
         activity_ratings r
-    ON
-        a.activity_id = r.activity_id
+    USING(activity_id)
     GROUP BY
         a.activity_id, a.activity_name
 ),
@@ -28,3 +27,23 @@ FROM
     RankedActivities
 WHERE
     rank <= 2;
+WITH ActivityAverage AS (
+    SELECT
+        a.activity_id,
+        a.activity_name,
+        AVG(r.rating) AS average_rating
+    FROM
+        activities a
+    JOIN
+        activity_ratings r
+    USING(activity_id)
+    GROUP BY
+        a.activity_id, a.activity_name
+)
+    SELECT
+        activity_name,
+        average_rating
+    FROM
+        ActivityAverage
+    ORDER BY average_rating desc
+    LIMIT 2;
