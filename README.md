@@ -470,7 +470,7 @@
 
 *We are looking for cheap gifts at the market. Which vendors are selling items priced below $10? List the unique (i.e. remove duplicates) vendor names.*
 
-**Table name:** *vendors*
+**Table name:** *sellers*
 
 | vendor_id | vendor_name    | market_location |
 |-----------|-----------------|------------------|
