@@ -51,3 +51,11 @@ FROM
   recipient_weights
 ORDER BY
   weight_percentage DESC;
+
+SELECT recipient_type,
+       SUM(weight_kg) AS total_weight,
+       ROUND(SUM(weight_kg) /
+       SUM(SUM(weight_kg)) OVER ()  * 100,2) as weight_percentage
+FROM gifts
+group by recipient_type
+Order by weight_percentage desc;
