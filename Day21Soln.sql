@@ -29,3 +29,25 @@ CROSS JOIN
   total_weight tw
 ORDER BY
   weight_percentage DESC;
+WITH
+  -- Calculate total weight for each recipient type
+  recipient_weights AS (
+    SELECT
+      recipient_type,
+      SUM(weight_kg) AS total_weight,
+      SUM(SUM(weight_kg)) OVER () AS total
+    FROM
+      gifts
+    GROUP BY
+      recipient_type
+  )
+
+-- Calculate weight percentage for each recipient type
+SELECT
+  recipient_type,
+  total_weight,
+  ROUND((total_weight / total) * 100,2) AS weight_percentage
+FROM
+  recipient_weights
+ORDER BY
+  weight_percentage DESC;
