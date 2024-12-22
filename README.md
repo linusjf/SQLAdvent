@@ -523,7 +523,7 @@
 | 3        | Max the Dog     |
 | 4        | Mayor May Who   |
 
-**Table name** *guest_gifts*
+**Table name:** *guest_gifts*
 
 | gift_id | guest_id | gift_name     |
 |---------|----------|----------------|
