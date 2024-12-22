@@ -1,6 +1,9 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS family;
+
+
 DROP TABLE IF EXISTS parent_child_relationships;
+
 
 -- Create the family table
 CREATE TABLE family (
@@ -8,6 +11,7 @@ CREATE TABLE family (
   name TEXT NOT NULL,
   age INTEGER NOT NULL
 );
+
 
 -- Create the parent_child_relationships table
 CREATE TABLE parent_child_relationships (
@@ -17,8 +21,10 @@ CREATE TABLE parent_child_relationships (
   FOREIGN KEY (child_id) REFERENCES family (member_id)
 );
 
+
 -- Insert row records into the family table
-INSERT INTO family (name, age)
+INSERT INTO
+  family (name, age)
 VALUES
   ('Alice', 30),
   ('Bob', 58),
@@ -31,8 +37,10 @@ VALUES
   ('Ian', 12),
   ('Jack', 3);
 
+
 -- Insert row records into the parent_child_relationships table
-INSERT INTO parent_child_relationships (parent_id, child_id)
+INSERT INTO
+  parent_child_relationships (parent_id, child_id)
 VALUES
   (2, 1),
   (3, 5),

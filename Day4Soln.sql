@@ -1,3 +1,20 @@
-select region, avg(snowfall_inches) as avg_snowfall from ski_resorts a join snowfall b on a.resort_id = b.resort_id group by region;
+SELECT
+  region,
+  avg(snowfall_inches) AS avg_snowfall
+FROM
+  ski_resorts a
+  JOIN snowfall b ON a.resort_id = b.resort_id
+GROUP BY
+  region;
 
-select region, avg(snowfall_inches) as avg_snowfall from ski_resorts a, snowfall b where a.resort_id = b.resort_id group by region;
+
+SELECT
+  region,
+  avg(snowfall_inches) AS avg_snowfall
+FROM
+  ski_resorts a,
+  snowfall b
+WHERE
+  a.resort_id = b.resort_id
+GROUP BY
+  region;

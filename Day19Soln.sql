@@ -3,8 +3,7 @@ SELECT
   MAX(ml.food_weight_kg) AS biggest_meal_kg
 FROM
   bears pb
-JOIN
-  meal_log ml ON pb.bear_id = ml.bear_id
+  JOIN meal_log ml ON pb.bear_id = ml.bear_id
 WHERE
   ml.date BETWEEN '2024-12-01' AND '2024-12-31'
 GROUP BY

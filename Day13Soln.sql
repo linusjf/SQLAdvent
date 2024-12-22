@@ -1,1 +1,7 @@
-select recipient, total(weight_kg) as total_wt from presents group by recipient;
+SELECT
+  recipient,
+  total(weight_kg) AS total_wt
+FROM
+  presents
+GROUP BY
+  recipient;

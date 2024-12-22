@@ -1,2 +1,26 @@
-select candy_name, candy_category as category, calories, rank() over (partition by candy_category order by calories desc) rank_in_category from candy_nutrition;
-select candy_name, candy_category as category, calories, rank() over (partition by candy_category order by calories desc) as rank_in_category from candy_nutrition;
+SELECT
+  candy_name,
+  candy_category AS category,
+  calories,
+  rank() OVER (
+    PARTITION BY
+      candy_category
+    ORDER BY
+      calories DESC
+  ) rank_in_category
+FROM
+  candy_nutrition;
+
+
+SELECT
+  candy_name,
+  candy_category AS category,
+  calories,
+  rank() OVER (
+    PARTITION BY
+      candy_category
+    ORDER BY
+      calories DESC
+  ) AS rank_in_category
+FROM
+  candy_nutrition;

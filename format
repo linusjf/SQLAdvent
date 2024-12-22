@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+for file in "$@"; do
+  sql-formatter -l sqlite --fix "$file"
+done

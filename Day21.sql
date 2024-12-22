@@ -1,6 +1,7 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS gifts;
 
+
 -- Create table
 CREATE TABLE gifts (
   gift_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,8 +10,10 @@ CREATE TABLE gifts (
   weight_kg REAL NOT NULL
 );
 
+
 -- Insert data
-INSERT INTO gifts (gift_name, recipient_type, weight_kg)
+INSERT INTO
+  gifts (gift_name, recipient_type, weight_kg)
 VALUES
   ('Toy Train', 'good', 2.5),
   ('Lumps of Coal', 'naughty', 1.5),

@@ -1,15 +1,19 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS resolutions;
 
+
 -- Create the resolutions table
 CREATE TABLE resolutions (
   resolution_id INTEGER PRIMARY KEY AUTOINCREMENT,
   friend_name TEXT NOT NULL,
   resolution TEXT NOT NULL,
-  is_completed INTEGER NOT NULL CHECK(is_completed IN (0, 1))
+  is_completed INTEGER NOT NULL CHECK (is_completed IN (0, 1))
 );
+
+
 -- Insert row records into the resolutions table
-INSERT INTO resolutions (friend_name, resolution, is_completed)
+INSERT INTO
+  resolutions (friend_name, resolution, is_completed)
 VALUES
   ('Alice', 'Exercise daily', 1),
   ('Alice', 'Read 20 books', 0),

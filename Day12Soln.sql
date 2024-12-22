@@ -1,1 +1,13 @@
-select globe_name, count(figurine_id) as count_figurines, material from snow_globes sg join figurines f  using(globe_id) group by globe_id order by count_figurines desc limit 3;
+SELECT
+  globe_name,
+  count(figurine_id) AS count_figurines,
+  material
+FROM
+  snow_globes sg
+  JOIN figurines f USING (globe_id)
+GROUP BY
+  globe_id
+ORDER BY
+  count_figurines DESC
+LIMIT
+  3;

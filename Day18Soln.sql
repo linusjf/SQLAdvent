@@ -1,49 +1,56 @@
-WITH ActivityAverage AS (
+WITH
+  ActivityAverage AS (
     SELECT
-        a.activity_id,
-        a.activity_name,
-        AVG(r.rating) AS average_rating
+      a.activity_id,
+      a.activity_name,
+      AVG(r.rating) AS average_rating
     FROM
-        activities a
-    JOIN
-        activity_ratings r
-    USING(activity_id)
+      activities a
+      JOIN activity_ratings r USING (activity_id)
     GROUP BY
-        a.activity_id, a.activity_name
-),
-RankedActivities AS (
+      a.activity_id,
+      a.activity_name
+  ),
+  RankedActivities AS (
     SELECT
-        activity_id,
-        activity_name,
-        average_rating,
-        RANK() OVER (ORDER BY average_rating DESC) AS rank
+      activity_id,
+      activity_name,
+      average_rating,
+      RANK() OVER (
+        ORDER BY
+          average_rating DESC
+      ) AS rank
     FROM
-        ActivityAverage
-)
+      ActivityAverage
+  )
 SELECT
-    activity_name,
-    average_rating
+  activity_name,
+  average_rating
 FROM
-    RankedActivities
+  RankedActivities
 WHERE
-    rank <= 2;
-WITH ActivityAverage AS (
+  rank <= 2;
+
+
+WITH
+  ActivityAverage AS (
     SELECT
-        a.activity_id,
-        a.activity_name,
-        AVG(r.rating) AS average_rating
+      a.activity_id,
+      a.activity_name,
+      AVG(r.rating) AS average_rating
     FROM
-        activities a
-    JOIN
-        activity_ratings r
-    USING(activity_id)
+      activities a
+      JOIN activity_ratings r USING (activity_id)
     GROUP BY
-        a.activity_id, a.activity_name
-)
-    SELECT
-        activity_name,
-        average_rating
-    FROM
-        ActivityAverage
-    ORDER BY average_rating desc
-    LIMIT 2;
+      a.activity_id,
+      a.activity_name
+  )
+SELECT
+  activity_name,
+  average_rating
+FROM
+  ActivityAverage
+ORDER BY
+  average_rating DESC
+LIMIT
+  2;

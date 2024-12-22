@@ -1,1 +1,12 @@
-select vendor_name, total(quantity_sold * price_per_unit) as total_revenue from vendors a join sales b on a.vendor_id = b.vendor_id group by vendor_name order by total_revenue desc limit 2;
+SELECT
+  vendor_name,
+  total(quantity_sold * price_per_unit) AS total_revenue
+FROM
+  vendors a
+  JOIN sales b ON a.vendor_id = b.vendor_id
+GROUP BY
+  vendor_name
+ORDER BY
+  total_revenue DESC
+LIMIT
+  2;
