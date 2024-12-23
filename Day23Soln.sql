@@ -29,3 +29,13 @@ FROM
 WHERE weight_change IS NOT NULL
 ORDER BY
   day_of_month;
+
+SELECT
+  g1.day_of_month,
+  g1.weight,
+  g1.weight - g2.weight AS weight_change
+FROM
+  grinch_weight_log g1
+  INNER JOIN grinch_weight_log g2 ON g1.day_of_month = g2.day_of_month + 1
+ORDER BY
+  g1.day_of_month;

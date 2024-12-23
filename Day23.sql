@@ -1,6 +1,7 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS grinch_weight_log;
 
+
 -- Create table
 CREATE TABLE grinch_weight_log (
   log_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -8,8 +9,10 @@ CREATE TABLE grinch_weight_log (
   weight REAL NOT NULL
 );
 
+
 -- Insert data
-INSERT INTO grinch_weight_log (day_of_month, weight)
+INSERT INTO
+  grinch_weight_log (day_of_month, weight)
 VALUES
   (1, 250.0),
   (2, 248.0),
