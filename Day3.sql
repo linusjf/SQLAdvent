@@ -1,7 +1,6 @@
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS candy_nutrition;
 
-
 -- Create the candy_nutrition table
 CREATE TABLE IF NOT EXISTS candy_nutrition (
   candy_id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
@@ -9,7 +8,6 @@ CREATE TABLE IF NOT EXISTS candy_nutrition (
   calories INTEGER NOT NULL,
   candy_category TEXT NOT NULL
 );
-
 
 -- Insert row records into the candy_nutrition table
 INSERT INTO
@@ -22,7 +20,6 @@ VALUES
   ('Dark Chocolate Truffle', 180, 'Chocolate'),
   ('Marshmallow', 900, 'Sweets'),
   ('Sugar Cookie', 140, 'Baked Goods');
-
 
 SELECT
   *

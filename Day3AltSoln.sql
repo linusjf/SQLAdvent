@@ -14,7 +14,6 @@ ORDER BY
   candy_category,
   rank_in_category;
 
-
 SELECT
   candy_name,
   candy_category category,
@@ -33,7 +32,6 @@ FROM
 ORDER BY
   candy_category,
   rank_in_category;
-
 
 SELECT
   candy_name,

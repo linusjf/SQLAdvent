@@ -1,17 +1,14 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS guests;
 
-
 -- Create table
 CREATE TABLE guests (
   guest_id INTEGER PRIMARY KEY AUTOINCREMENT,
   guest_name TEXT NOT NULL
 );
 
-
 -- Drop table if exists
 DROP TABLE IF EXISTS guest_gifts;
-
 
 -- Create table
 CREATE TABLE guest_gifts (
@@ -21,7 +18,6 @@ CREATE TABLE guest_gifts (
   FOREIGN KEY (guest_id) REFERENCES guests (guest_id)
 );
 
-
 -- Insert data
 INSERT INTO
   guests (guest_name)
@@ -30,7 +26,6 @@ VALUES
   ('The Grinch'),
   ('Max the Dog'),
   ('Mayor May Who');
-
 
 -- Insert data
 INSERT INTO

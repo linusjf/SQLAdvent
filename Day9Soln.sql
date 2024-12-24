@@ -9,7 +9,6 @@ ORDER BY
   menu.event_id,
   calorie_density DESC;
 
-
 SELECT
   dish_name,
   event_name,
@@ -32,7 +31,6 @@ FROM
   )
 WHERE
   row_num <= 3;
-
 
 WITH
   dishes AS (
@@ -58,7 +56,6 @@ FROM
   dishes
 WHERE
   row_num <= 3;
-
 
 WITH
   dishes AS (

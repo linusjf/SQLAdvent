@@ -1,16 +1,13 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS menu;
 
-
 DROP TABLE IF EXISTS events;
-
 
 -- Create the events table
 CREATE TABLE events (
   event_id INTEGER PRIMARY KEY AUTOINCREMENT,
   event_name TEXT NOT NULL
 );
-
 
 -- Create the menu table
 CREATE TABLE menu (
@@ -22,7 +19,6 @@ CREATE TABLE menu (
   FOREIGN KEY (event_id) REFERENCES events (event_id)
 );
 
-
 -- Insert row records into the events table
 INSERT INTO
   events (event_name)
@@ -30,7 +26,6 @@ VALUES
   ('Christmas Eve Dinner'),
   ('New Years Feast'),
   ('Winter Solstice Potluck');
-
 
 -- Insert row records into the menu table
 INSERT INTO

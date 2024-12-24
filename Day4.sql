@@ -1,8 +1,6 @@
 DROP TABLE IF EXISTS snowfall;
 
-
 DROP TABLE IF EXISTS ski_resorts;
-
 
 -- Create the ski_resorts table
 CREATE TABLE ski_resorts (
@@ -11,14 +9,12 @@ CREATE TABLE ski_resorts (
   region TEXT NOT NULL
 );
 
-
 -- Create the snowfall table
 CREATE TABLE snowfall (
   resort_id INTEGER PRIMARY KEY,
   snowfall_inches REAL NOT NULL,
   FOREIGN KEY (resort_id) REFERENCES ski_resorts (resort_id)
 );
-
 
 -- Insert row records into the ski_resorts table
 INSERT INTO
@@ -28,7 +24,6 @@ VALUES
   (2, 'Winter Wonderland', 'Wasatch Range'),
   (3, 'Frozen Slopes', 'Alaska Range'),
   (4, 'Powder Paradise', 'Rocky Mountains');
-
 
 -- Insert row records into the snowfall table
 INSERT INTO

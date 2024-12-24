@@ -1,7 +1,6 @@
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS family_members;
 
-
 -- Create the family_members table
 CREATE TABLE family_members (
   member_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,7 +8,6 @@ CREATE TABLE family_members (
   relationship TEXT NOT NULL,
   birthday DATE NOT NULL
 );
-
 
 -- Insert row records into the family_members table
 INSERT INTO

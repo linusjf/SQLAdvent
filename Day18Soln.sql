@@ -31,7 +31,6 @@ FROM
 WHERE
   rank <= 2;
 
-
 WITH
   ActivityAverage AS (
     SELECT

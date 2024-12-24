@@ -1,13 +1,11 @@
 DROP TABLE IF EXISTS gifts;
 
-
 -- Create the gifts table
 CREATE TABLE IF NOT EXISTS gifts (
   gift_name TEXT NOT NULL,
   recipient TEXT NOT NULL,
   weight_kg REAL NOT NULL
 );
-
 
 -- Insert row records into the gifts table
 INSERT INTO

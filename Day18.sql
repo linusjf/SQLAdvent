@@ -1,16 +1,13 @@
 -- Drop tables if they already exist
 DROP TABLE IF EXISTS activity_ratings;
 
-
 DROP TABLE IF EXISTS activities;
-
 
 -- Create activities table
 CREATE TABLE activities (
   activity_id INTEGER PRIMARY KEY AUTOINCREMENT,
   activity_name TEXT NOT NULL
 );
-
 
 -- Create activity_ratings table
 CREATE TABLE activity_ratings (
@@ -20,7 +17,6 @@ CREATE TABLE activity_ratings (
   FOREIGN KEY (activity_id) REFERENCES activities (activity_id)
 );
 
-
 -- Insert data into activities table
 INSERT INTO
   activities (activity_name)
@@ -28,7 +24,6 @@ VALUES
   ('Surfing Lessons'),
   ('Jet Skiing'),
   ('Sunset Yoga');
-
 
 -- Insert data into activity_ratings table
 INSERT INTO

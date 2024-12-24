@@ -1,7 +1,6 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS sellers;
 
-
 -- Create table
 CREATE TABLE sellers (
   vendor_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,10 +8,8 @@ CREATE TABLE sellers (
   market_location TEXT NOT NULL
 );
 
-
 -- Drop table if exists
 DROP TABLE IF EXISTS item_prices;
-
 
 -- Create table
 CREATE TABLE item_prices (
@@ -23,7 +20,6 @@ CREATE TABLE item_prices (
   FOREIGN KEY (vendor_id) REFERENCES sellers (vendor_id)
 );
 
-
 -- Insert data
 INSERT INTO
   sellers (vendor_name, market_location)
@@ -31,7 +27,6 @@ VALUES
   ('Cozy Crafts', 'Downtown Square'),
   ('Sweet Treats', 'Central Park'),
   ('Winter Warmers', 'Downtown Square');
-
 
 -- Insert data
 INSERT INTO

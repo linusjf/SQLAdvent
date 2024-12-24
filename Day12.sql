@@ -1,9 +1,7 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS figurines;
 
-
 DROP TABLE IF EXISTS snow_globes;
-
 
 -- Create the snow_globes table
 CREATE TABLE snow_globes (
@@ -13,7 +11,6 @@ CREATE TABLE snow_globes (
   material TEXT NOT NULL
 );
 
-
 -- Create the figurines table
 CREATE TABLE figurines (
   figurine_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -21,7 +18,6 @@ CREATE TABLE figurines (
   figurine_type TEXT NOT NULL,
   FOREIGN KEY (globe_id) REFERENCES snow_globes (globe_id)
 );
-
 
 -- Insert row records into the snow_globes table
 INSERT INTO
@@ -31,7 +27,6 @@ VALUES
   ('Santas Workshop', 300, 'Plastic'),
   ('Frozen Forest', 400, 'Glass'),
   ('Holiday Village', 600, 'Glass');
-
 
 -- Insert row records into the figurines table
 INSERT INTO

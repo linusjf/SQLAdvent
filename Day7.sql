@@ -1,9 +1,7 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS sales;
 
-
 DROP TABLE IF EXISTS vendors;
-
 
 -- Create the vendors table
 CREATE TABLE vendors (
@@ -11,7 +9,6 @@ CREATE TABLE vendors (
   vendor_name TEXT NOT NULL,
   market_location TEXT NOT NULL
 );
-
 
 -- Create the sales table
 CREATE TABLE sales (
@@ -23,7 +20,6 @@ CREATE TABLE sales (
   FOREIGN KEY (vendor_id) REFERENCES vendors (vendor_id)
 );
 
-
 -- Insert row records into the vendors table
 INSERT INTO
   vendors (vendor_name, market_location)
@@ -31,7 +27,6 @@ VALUES
   ('Cozy Crafts', 'Downtown Square'),
   ('Sweet Treats', 'Central Park'),
   ('Winter Warmers', 'Downtown Square');
-
 
 -- Insert row records into the sales table
 INSERT INTO

@@ -7,7 +7,6 @@ FROM
 GROUP BY
   region;
 
-
 SELECT
   region,
   avg(snowfall_inches) AS avg_snowfall

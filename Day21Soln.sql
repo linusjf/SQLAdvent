@@ -27,7 +27,6 @@ FROM
 ORDER BY
   weight_percentage DESC;
 
-
 WITH
   -- Calculate total weight for each recipient type
   recipient_weights AS (
@@ -50,7 +49,6 @@ FROM
 ORDER BY
   weight_percentage DESC;
 
-
 SELECT
   recipient_type,
   SUM(weight_kg) AS total_weight,
@@ -64,7 +62,6 @@ GROUP BY
   recipient_type
 ORDER BY
   weight_percentage DESC;
-
 
 WITH
   totals AS (

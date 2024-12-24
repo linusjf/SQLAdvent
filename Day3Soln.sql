@@ -11,7 +11,6 @@ SELECT
 FROM
   candy_nutrition;
 
-
 SELECT
   candy_name,
   candy_category AS category,

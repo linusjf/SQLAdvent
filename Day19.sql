@@ -1,7 +1,6 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS bears;
 
-
 -- Create table
 CREATE TABLE bears (
   bear_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,10 +8,8 @@ CREATE TABLE bears (
   age INTEGER NOT NULL
 );
 
-
 -- Drop table if exists
 DROP TABLE IF EXISTS meal_log;
-
 
 -- Create table
 CREATE TABLE meal_log (
@@ -24,7 +21,6 @@ CREATE TABLE meal_log (
   FOREIGN KEY (bear_id) REFERENCES bears (bear_id)
 );
 
-
 -- Insert data
 INSERT INTO
   bears (bear_name, age)
@@ -32,7 +28,6 @@ VALUES
   ('Snowball', 10),
   ('Frosty', 7),
   ('Iceberg', 15);
-
 
 -- Insert data
 INSERT INTO

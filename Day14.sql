@@ -1,7 +1,6 @@
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS snow;
 
-
 -- Create the snow table
 CREATE TABLE snow (
   resort_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,7 +8,6 @@ CREATE TABLE snow (
   location TEXT NOT NULL,
   snowfall_inches INTEGER NOT NULL
 );
-
 
 -- Insert row records into the snow table
 INSERT INTO

@@ -1,6 +1,5 @@
 DROP TABLE IF EXISTS beach_temperature_predictions;
 
-
 -- Create the beach_temperature_predictions table
 CREATE TABLE IF NOT EXISTS beach_temperature_predictions (
   beach_name TEXT NOT NULL,
@@ -8,7 +7,6 @@ CREATE TABLE IF NOT EXISTS beach_temperature_predictions (
   expected_temperature_c REAL NOT NULL,
   date DATE NOT NULL
 );
-
 
 -- Insert row records into the beach_temperature_predictions table
 INSERT INTO

@@ -10,7 +10,6 @@ WHERE
       guest_gifts
   );
 
-
 SELECT
   guest_name
 FROM
@@ -22,7 +21,6 @@ FROM
   guests
   JOIN guest_gifts USING (guest_id);
 
-
 SELECT
   g.guest_name
 FROM
@@ -30,7 +28,6 @@ FROM
   LEFT JOIN guest_gifts gg ON g.guest_id = gg.guest_id
 WHERE
   gg.gift_id IS NULL;
-
 
 SELECT
   guest_name

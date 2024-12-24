@@ -1,7 +1,6 @@
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS candy_sales;
 
-
 -- Create the candy_sales table
 CREATE TABLE candy_sales (
   sale_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -10,7 +9,6 @@ CREATE TABLE candy_sales (
   price_per_unit REAL NOT NULL,
   category TEXT NOT NULL
 );
-
 
 -- Insert row records into the candy_sales table
 INSERT INTO

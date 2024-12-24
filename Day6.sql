@@ -1,9 +1,7 @@
 -- Drop the tables if they already exist
 DROP TABLE IF EXISTS tracking;
 
-
 DROP TABLE IF EXISTS polar_bears;
-
 
 -- Create the polar_bears table
 CREATE TABLE polar_bears (
@@ -11,7 +9,6 @@ CREATE TABLE polar_bears (
   bear_name TEXT NOT NULL,
   age INTEGER NOT NULL
 );
-
 
 -- Create the tracking table
 CREATE TABLE tracking (
@@ -22,7 +19,6 @@ CREATE TABLE tracking (
   FOREIGN KEY (bear_id) REFERENCES polar_bears (bear_id)
 );
 
-
 -- Insert row records into the polar_bears table
 INSERT INTO
   polar_bears (bear_name, age)
@@ -31,7 +27,6 @@ VALUES
   ('Frosty', 7),
   ('Iceberg', 15),
   ('Chilly', 5);
-
 
 -- Insert row records into the tracking table
 INSERT INTO

@@ -1,7 +1,6 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS gifts;
 
-
 -- Create table
 CREATE TABLE gifts (
   gift_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,7 +8,6 @@ CREATE TABLE gifts (
   recipient_type TEXT NOT NULL,
   weight_kg REAL NOT NULL
 );
-
 
 -- Insert data
 INSERT INTO

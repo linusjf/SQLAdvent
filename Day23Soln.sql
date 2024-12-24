@@ -17,7 +17,6 @@ FROM
 WHERE
   weight_change IS NOT NULL;
 
-
 SELECT
   g1.day_of_month,
   g1.weight,
@@ -29,7 +28,6 @@ WHERE
   weight_change IS NOT NULL
 ORDER BY
   g1.day_of_month;
-
 
 SELECT
   day_of_month,
@@ -49,7 +47,6 @@ WHERE
 ORDER BY
   day_of_month;
 
-
 SELECT
   g1.day_of_month,
   g1.weight,
@@ -59,7 +56,6 @@ FROM
   INNER JOIN grinch_weight_log g2 ON (g1.day_of_month + 1) - (g2.day_of_month + 1) = 1
 ORDER BY
   g1.day_of_month;
-
 
 SELECT
   g1.day_of_month,

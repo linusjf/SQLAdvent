@@ -1,7 +1,6 @@
 -- Drop the table if it already exists
 DROP TABLE IF EXISTS grinch_pranks;
 
-
 -- Create the grinch_pranks table
 CREATE TABLE grinch_pranks (
   prank_id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -9,7 +8,6 @@ CREATE TABLE grinch_pranks (
   location TEXT NOT NULL,
   difficulty TEXT NOT NULL
 );
-
 
 -- Insert row records into the grinch_pranks table
 INSERT INTO

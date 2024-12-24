@@ -1,14 +1,12 @@
 -- Drop table if exists
 DROP TABLE IF EXISTS grinch_weight_log;
 
-
 -- Create table
 CREATE TABLE grinch_weight_log (
   log_id INTEGER PRIMARY KEY AUTOINCREMENT,
   day_of_month INTEGER NOT NULL,
   weight REAL NOT NULL
 );
-
 
 -- Insert data
 INSERT INTO
