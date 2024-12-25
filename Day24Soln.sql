@@ -11,3 +11,16 @@ FROM
   deliveries
 ORDER BY
   delivery_date;
+
+SELECT
+  a.delivery_date AS delivery_date,
+  SUM(b.gifts_delivered) AS cumulative_sum
+FROM
+  deliveries AS a,
+  deliveries AS b
+WHERE
+  b.delivery_date <= a.delivery_date
+GROUP BY
+  a.delivery_date
+ORDER BY
+  delivery_date;
