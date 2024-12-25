@@ -24,3 +24,15 @@ GROUP BY
   a.delivery_date
 ORDER BY
   delivery_date;
+
+SELECT
+  delivery_date,
+  gifts_delivered,
+  SUM(gifts_delivered) OVER (
+    ORDER BY
+      delivery_date
+  ) AS cumulative_gifts
+FROM
+  deliveries
+ORDER BY
+  delivery_date;
