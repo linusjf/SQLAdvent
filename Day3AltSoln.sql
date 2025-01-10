@@ -15,22 +15,22 @@ ORDER BY
   rank_in_category;
 
 SELECT
-  candy_name,
-  candy_category AS category,
-  calories,
+  candy_one.candy_name,
+  candy_one.candy_category AS category,
+  candy_one.calories,
   (
     SELECT COUNT(*)
     FROM
-      candy_nutrition AS c2
+      candy_nutrition AS candy_two
     WHERE
-      c2.candy_category = c1.candy_category
-      AND c2.calories > c1.calories
+      candy_two.candy_category = candy_one.candy_category
+      AND candy_two.calories > candy_one.calories
   ) + 1 AS rank_in_category
 FROM
-  candy_nutrition AS c1
+  candy_nutrition AS candy_one
 ORDER BY
-  candy_category,
-  rank_in_category;
+  candy_one.candy_category,
+  candy_one.rank_in_category;
 
 SELECT
   candy_name,
