@@ -1,7 +1,6 @@
-SELECT DISTINCT
-  v.vendor_name
+SELECT DISTINCT sellers.vendor_name
 FROM
-  sellers v
-  JOIN item_prices ip USING (vendor_id)
+  sellers
+  INNER JOIN item_prices USING (vendor_id)
 WHERE
-  ip.price_usd < 10;
+  item_prices.price_usd < 10;

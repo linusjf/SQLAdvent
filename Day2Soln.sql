@@ -1,5 +1,4 @@
-SELECT
-  gift_name
+SELECT gift_name
 FROM
   gifts
 WHERE

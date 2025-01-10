@@ -1,12 +1,12 @@
 SELECT
-  pb.bear_name,
-  MAX(ml.food_weight_kg) AS biggest_meal_kg
+  bears.bear_name,
+  MAX(meal_log.food_weight_kg) AS biggest_meal_kg
 FROM
-  bears pb
-  JOIN meal_log ml ON pb.bear_id = ml.bear_id
+  bears
+  INNER JOIN meal_log ON bears.bear_id = meal_log.bear_id
 WHERE
-  ml.date BETWEEN '2024-12-01' AND '2024-12-31'
+  meal_log.meal_date BETWEEN '2024-12-01' AND '2024-12-31'
 GROUP BY
-  pb.bear_name
+  bears.bear_name
 ORDER BY
   biggest_meal_kg DESC;

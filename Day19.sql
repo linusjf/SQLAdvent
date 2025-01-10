@@ -17,7 +17,7 @@ CREATE TABLE meal_log (
   bear_id INTEGER NOT NULL,
   food_type TEXT NOT NULL,
   food_weight_kg REAL NOT NULL,
-  date DATE NOT NULL,
+  meal_date DATE NOT NULL,
   FOREIGN KEY (bear_id) REFERENCES bears (bear_id)
 );
 
@@ -31,7 +31,7 @@ VALUES
 
 -- Insert data
 INSERT INTO
-  meal_log (bear_id, food_type, food_weight_kg, date)
+  meal_log (bear_id, food_type, food_weight_kg, meal_date)
 VALUES
   (1, 'Seal', 30.0, '2024-12-01'),
   (2, 'Fish', 15.0, '2024-12-02'),

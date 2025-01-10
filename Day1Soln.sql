@@ -1,6 +1,6 @@
 SELECT
   customer_name,
-  count(DISTINCT activity) AS cnt
+  COUNT(DISTINCT activity) AS cnt
 FROM
   rentals
 GROUP BY

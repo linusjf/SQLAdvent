@@ -11,19 +11,18 @@ WITH
   ),
   -- Calculate total weight of all gifts
   total_weight AS (
-    SELECT
-      SUM(total_weight) AS total
+    SELECT SUM(total_weight) AS total
     FROM
       recipient_weights
   )
   -- Calculate weight percentage for each recipient type
 SELECT
-  rw.recipient_type,
-  rw.total_weight,
-  ROUND((rw.total_weight / tw.total) * 100, 2) AS weight_percentage
+  rec_wts.recipient_type,
+  rec_wts.total_weight,
+  ROUND((rec_wts.total_weight / tot_wts.total) * 100, 2) AS weight_percentage
 FROM
-  recipient_weights rw
-  CROSS JOIN total_weight tw
+  recipient_weights AS rec_wts
+  CROSS JOIN total_weight AS tot_wts
 ORDER BY
   weight_percentage DESC;
 
@@ -66,21 +65,21 @@ ORDER BY
 WITH
   totals AS (
     SELECT DISTINCT
-      (recipient_type) AS recipient_type,
+      recipient_type,
       SUM(weight_kg) OVER (
         PARTITION BY
           recipient_type
         ORDER BY
           recipient_type
-      ) AS TotalWeight,
-      SUM(weight_kg) OVER () AS Total
+      ) AS totalweight,
+      SUM(weight_kg) OVER () AS total
     FROM
       gifts
   )
 SELECT
   recipient_type,
-  TotalWeight,
-  ROUND((TotalWeight / Total) * 100, 2) AS weight_percentage
+  totalweight,
+  ROUND((totalweight / total) * 100, 2) AS weight_percentage
 FROM
   totals
 ORDER BY

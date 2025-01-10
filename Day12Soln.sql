@@ -1,12 +1,12 @@
 SELECT
-  globe_name,
-  count(figurine_id) AS count_figurines,
-  material
+  snow_globes.globe_name,
+  COUNT(figurines.figurine_id) AS count_figurines,
+  snow_globes.material
 FROM
-  snow_globes sg
-  JOIN figurines f USING (globe_id)
+  snow_globes
+  INNER JOIN figurines USING (globe_id)
 GROUP BY
-  globe_id
+  snow_globes.globe_id
 ORDER BY
   count_figurines DESC
 LIMIT

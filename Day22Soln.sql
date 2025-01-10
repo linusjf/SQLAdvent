@@ -1,44 +1,38 @@
-SELECT
-  guest_name
+--noqa: disable=RF02
+SELECT guest_name
 FROM
   guests
 WHERE
   guest_id NOT IN (
-    SELECT DISTINCT
-      guest_id
+    SELECT DISTINCT guest_id
     FROM
       guest_gifts
   );
 
-SELECT
-  guest_name
+SELECT guest_name
 FROM
   guests
 EXCEPT
-SELECT
-  guest_name
+SELECT guests.guest_name
 FROM
   guests
-  JOIN guest_gifts USING (guest_id);
+  INNER JOIN guest_gifts USING (guest_id);
 
-SELECT
-  g.guest_name
+SELECT guests.guest_name
 FROM
-  guests g
-  LEFT JOIN guest_gifts gg ON g.guest_id = gg.guest_id
+  guests
+  LEFT JOIN guest_gifts ON guests.guest_id = guest_gifts.guest_id
 WHERE
-  gg.gift_id IS NULL;
+  guest_gifts.gift_id IS NULL;
 
-SELECT
-  guest_name
+SELECT guest_name
 FROM
-  guests g
+  guests
 WHERE
   NOT EXISTS (
-    SELECT
-      1
+    SELECT 1
     FROM
-      guest_gifts gg
+      guest_gifts
     WHERE
-      gg.guest_id = g.guest_id
+      guest_gifts.guest_id = guests.guest_id
   );

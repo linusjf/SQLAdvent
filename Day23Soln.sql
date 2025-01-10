@@ -22,8 +22,8 @@ SELECT
   g1.weight,
   g1.weight - g2.weight AS weight_change
 FROM
-  grinch_weight_log g1
-  LEFT JOIN grinch_weight_log g2 ON g1.day_of_month = g2.day_of_month + 1
+  grinch_weight_log AS g1
+  LEFT JOIN grinch_weight_log AS g2 ON g1.day_of_month = g2.day_of_month + 1
 WHERE
   weight_change IS NOT NULL
 ORDER BY
@@ -33,15 +33,14 @@ SELECT
   day_of_month,
   weight,
   weight - (
-    SELECT
-      weight
+    SELECT weight
     FROM
       grinch_weight_log
     WHERE
       day_of_month = g.day_of_month - 1
   ) AS weight_change
 FROM
-  grinch_weight_log g
+  grinch_weight_log AS g
 WHERE
   weight_change IS NOT NULL
 ORDER BY
@@ -52,8 +51,8 @@ SELECT
   g1.weight,
   g1.weight - g2.weight AS weight_change
 FROM
-  grinch_weight_log g1
-  INNER JOIN grinch_weight_log g2 ON (g1.day_of_month + 1) - (g2.day_of_month + 1) = 1
+  grinch_weight_log AS g1
+  INNER JOIN grinch_weight_log AS g2 ON (g1.day_of_month + 1) - (g2.day_of_month + 1) = 1
 ORDER BY
   g1.day_of_month;
 
@@ -62,7 +61,7 @@ SELECT
   g1.weight,
   g1.weight - g2.weight AS weight_change
 FROM
-  grinch_weight_log g1
-  INNER JOIN grinch_weight_log g2 ON g1.day_of_month = g2.day_of_month + 1
+  grinch_weight_log AS g1
+  INNER JOIN grinch_weight_log AS g2 ON g1.day_of_month = g2.day_of_month + 1
 ORDER BY
   g1.day_of_month;
