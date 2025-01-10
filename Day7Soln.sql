@@ -1,11 +1,11 @@
 SELECT
-  vendor_name,
-  TOTAL(quantity_sold * price_per_unit) AS total_revenue
+  vendors.vendor_name,
+  TOTAL(sales.quantity_sold * sales.price_per_unit) AS total_revenue
 FROM
-  vendors AS a
-  INNER JOIN sales AS b ON a.vendor_id = b.vendor_id
+  vendors
+  INNER JOIN sales ON vendors.vendor_id = sales.vendor_id
 GROUP BY
-  vendor_name
+  vendors.vendor_name
 ORDER BY
   total_revenue DESC
 LIMIT

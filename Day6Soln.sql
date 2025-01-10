@@ -1,15 +1,15 @@
 SELECT
-  a.bear_id,
-  bear_name,
-  SUM(distance_km) AS total_distance_travelled
+  bears.bear_id,
+  bears.bear_name,
+  SUM(tracking.distance_km) AS total_distance_travelled
 FROM
-  polar_bears AS a
-  INNER JOIN tracking AS b ON a.bear_id = b.bear_id
-  AND STRFTIME('%m', date) = '12'
-  AND STRFTIME('%Y', date) = '2024'
+  polar_bears AS bears
+  INNER JOIN tracking ON bears.bear_id = tracking.bear_id
+  AND STRFTIME('%m', tracking.tracking_date) = '12'
+  AND STRFTIME('%Y', tracking.tracking_date) = '2024'
 GROUP BY
-  a.bear_id,
-  a.bear_name
+  bears.bear_id,
+  bears.bear_name
 ORDER BY
   total_distance_travelled DESC
 LIMIT

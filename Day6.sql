@@ -15,7 +15,7 @@ CREATE TABLE tracking (
   tracking_id INTEGER PRIMARY KEY AUTOINCREMENT,
   bear_id INTEGER NOT NULL,
   distance_km REAL NOT NULL,
-  date DATE NOT NULL,
+  tracking_date DATE NOT NULL,
   FOREIGN KEY (bear_id) REFERENCES polar_bears (bear_id)
 );
 
@@ -30,7 +30,7 @@ VALUES
 
 -- Insert row records into the tracking table
 INSERT INTO
-  tracking (bear_id, distance_km, date)
+  tracking (bear_id, distance_km, tracking_date)
 VALUES
   (1, 25, '2024-12-01'),
   (2, 40, '2024-12-02'),

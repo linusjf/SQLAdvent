@@ -1,19 +1,19 @@
 SELECT
-  region,
-  AVG(snowfall_inches) AS avg_snowfall
+  resorts.region,
+  AVG(snow.snowfall_inches) AS avg_snowfall
 FROM
-  ski_resorts AS a
-  INNER JOIN snowfall AS b ON a.resort_id = b.resort_id
+  ski_resorts AS resorts
+  INNER JOIN snowfall AS snow ON resorts.resort_id = snow.resort_id
 GROUP BY
-  region;
+  resorts.region;
 
 SELECT
-  region,
-  AVG(snowfall_inches) AS avg_snowfall
+  resorts.region,
+  AVG(snow.snowfall_inches) AS avg_snowfall
 FROM
-  ski_resorts AS a,
-  snowfall AS b
+  ski_resorts AS resorts,
+  snowfall AS snow
 WHERE
-  a.resort_id = b.resort_id
+  resorts.resort_id = snow.resort_id
 GROUP BY
-  region;
+  resorts.region;

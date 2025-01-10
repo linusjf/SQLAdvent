@@ -38,16 +38,16 @@ ORDER BY
   delivery_date;
 
 SELECT
-  delivery_date,
-  gifts_delivered,
+  dels.delivery_date,
+  dels.gifts_delivered,
   (
-    SELECT SUM(gifts_delivered)
+    SELECT SUM(deliveries.gifts_delivered)
     FROM
       deliveries
     WHERE
-      delivery_date <= dels.delivery_date
+      deliveries.delivery_date <= dels.delivery_date
   ) AS cumulative_gifts
 FROM
   deliveries AS dels
 ORDER BY
-  delivery_date;
+  dels.delivery_date;
