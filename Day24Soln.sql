@@ -20,8 +20,7 @@ ORDER BY del_a.delivery_date;
 SELECT
   delivery_date,
   gifts_delivered,
-  SUM(gifts_delivered) OVER (
-ORDER BY delivery_date) AS cumulative_gifts
+  SUM(gifts_delivered) OVER (ORDER BY delivery_date) AS cumulative_gifts
 FROM deliveries
 ORDER BY delivery_date;
 

@@ -14,8 +14,7 @@ WITH
       activity_id,
       activity_name,
       average_rating,
-      RANK() OVER (
-ORDER BY average_rating DESC) AS rank
+      RANK() OVER (ORDER BY average_rating DESC) AS rank
     FROM activityaverage
   )
 SELECT
