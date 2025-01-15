@@ -7,9 +7,7 @@ WITH
     FROM
       activities
       INNER JOIN activity_ratings USING (activity_id)
-    GROUP BY
-      activities.activity_id,
-      activities.activity_name
+    GROUP BY activities.activity_id, activities.activity_name
   ),
   rankedactivities AS (
     SELECT
@@ -17,19 +15,14 @@ WITH
       activity_name,
       average_rating,
       RANK() OVER (
-        ORDER BY
-          average_rating DESC
-      ) AS rank
-    FROM
-      activityaverage
+ORDER BY average_rating DESC) AS rank
+    FROM activityaverage
   )
 SELECT
   activity_name,
   average_rating
-FROM
-  rankedactivities
-WHERE
-  rank <= 2;
+FROM rankedactivities
+WHERE rank <= 2;
 
 WITH
   activityaverage AS (
@@ -40,16 +33,11 @@ WITH
     FROM
       activities
       INNER JOIN activity_ratings USING (activity_id)
-    GROUP BY
-      activities.activity_id,
-      activities.activity_name
+    GROUP BY activities.activity_id, activities.activity_name
   )
 SELECT
   activity_name,
   average_rating
-FROM
-  activityaverage
-ORDER BY
-  average_rating DESC
-LIMIT
-  2;
+FROM activityaverage
+ORDER BY average_rating DESC
+LIMIT 2;

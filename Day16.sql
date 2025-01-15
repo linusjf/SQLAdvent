@@ -11,13 +11,8 @@ CREATE TABLE candy_sales (
 );
 
 -- Insert row records into the candy_sales table
-INSERT INTO
-  candy_sales (
-    candy_name,
-    quantity_sold,
-    price_per_unit,
-    category
-  )
+INSERT INTO candy_sales
+  (candy_name, quantity_sold, price_per_unit, category)
 VALUES
   ('Candy Cane', 20, 1.5, 'Sweets'),
   ('Chocolate Bar', 10, 2, 'Chocolate'),

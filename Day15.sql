@@ -19,8 +19,8 @@ CREATE TABLE parent_child_relationships (
 );
 
 -- Insert row records into the family table
-INSERT INTO
-  family (name, age)
+INSERT INTO family
+  (name, age)
 VALUES
   ('Alice', 30),
   ('Bob', 58),
@@ -34,8 +34,8 @@ VALUES
   ('Jack', 3);
 
 -- Insert row records into the parent_child_relationships table
-INSERT INTO
-  parent_child_relationships (parent_id, child_id)
+INSERT INTO parent_child_relationships
+  (parent_id, child_id)
 VALUES
   (2, 1),
   (3, 5),

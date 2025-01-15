@@ -10,8 +10,8 @@ CREATE TABLE family_members (
 );
 
 -- Insert row records into the family_members table
-INSERT INTO
-  family_members (name, relationship, birthday)
+INSERT INTO family_members
+  (name, relationship, birthday)
 VALUES
   ('Dawn', 'Sister', '2024-12-24'),
   ('Bob', 'Father', '2024-05-20'),

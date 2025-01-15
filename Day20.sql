@@ -21,16 +21,16 @@ CREATE TABLE item_prices (
 );
 
 -- Insert data
-INSERT INTO
-  sellers (vendor_name, market_location)
+INSERT INTO sellers
+  (vendor_name, market_location)
 VALUES
   ('Cozy Crafts', 'Downtown Square'),
   ('Sweet Treats', 'Central Park'),
   ('Winter Warmers', 'Downtown Square');
 
 -- Insert data
-INSERT INTO
-  item_prices (vendor_id, item_name, price_usd)
+INSERT INTO item_prices
+  (vendor_id, item_name, price_usd)
 VALUES
   (1, 'Knitted Scarf', 25.0),
   (2, 'Hot Chocolate', 5.0),

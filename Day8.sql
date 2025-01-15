@@ -10,8 +10,8 @@ CREATE TABLE gifts (
 );
 
 -- Insert row records into the gifts table
-INSERT INTO
-  gifts (gift_name, recipient_type, weight_kg)
+INSERT INTO gifts
+  (gift_name, recipient_type, weight_kg)
 VALUES
   ('Toy Train', 'good', 2.5),
   ('Lumps of Coal', 'naughty', 1.5),

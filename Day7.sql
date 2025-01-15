@@ -21,21 +21,16 @@ CREATE TABLE sales (
 );
 
 -- Insert row records into the vendors table
-INSERT INTO
-  vendors (vendor_name, market_location)
+INSERT INTO vendors
+  (vendor_name, market_location)
 VALUES
   ('Cozy Crafts', 'Downtown Square'),
   ('Sweet Treats', 'Central Park'),
   ('Winter Warmers', 'Downtown Square');
 
 -- Insert row records into the sales table
-INSERT INTO
-  sales (
-    vendor_id,
-    item_name,
-    quantity_sold,
-    price_per_unit
-  )
+INSERT INTO sales
+  (vendor_id, item_name, quantity_sold, price_per_unit)
 VALUES
   (1, 'Knitted Scarf', 15, 25.0),
   (2, 'Hot Chocolate', 50, 3.5),

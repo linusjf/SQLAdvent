@@ -5,9 +5,6 @@ SELECT
 FROM
   snow_globes
   INNER JOIN figurines USING (globe_id)
-GROUP BY
-  snow_globes.globe_id
-ORDER BY
-  count_figurines DESC
-LIMIT
-  3;
+GROUP BY snow_globes.globe_id
+ORDER BY count_figurines DESC
+LIMIT 3;

@@ -1,5 +1,3 @@
 SELECT gift_name
-FROM
-  gifts
-WHERE
-  weight_kg > 1.0;
+FROM gifts
+WHERE weight_kg > 1.0;

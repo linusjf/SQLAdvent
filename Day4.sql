@@ -17,8 +17,8 @@ CREATE TABLE snowfall (
 );
 
 -- Insert row records into the ski_resorts table
-INSERT INTO
-  ski_resorts (resort_id, resort_name, region)
+INSERT INTO ski_resorts
+  (resort_id, resort_name, region)
 VALUES
   (1, 'Snowy Peaks', 'Rocky Mountains'),
   (2, 'Winter Wonderland', 'Wasatch Range'),
@@ -26,8 +26,8 @@ VALUES
   (4, 'Powder Paradise', 'Rocky Mountains');
 
 -- Insert row records into the snowfall table
-INSERT INTO
-  snowfall (resort_id, snowfall_inches)
+INSERT INTO snowfall
+  (resort_id, snowfall_inches)
 VALUES
   (1, 60),
   (2, 45),

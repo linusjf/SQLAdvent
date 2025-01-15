@@ -18,16 +18,16 @@ CREATE TABLE activity_ratings (
 );
 
 -- Insert data into activities table
-INSERT INTO
-  activities (activity_name)
+INSERT INTO activities
+  (activity_name)
 VALUES
   ('Surfing Lessons'),
   ('Jet Skiing'),
   ('Sunset Yoga');
 
 -- Insert data into activity_ratings table
-INSERT INTO
-  activity_ratings (activity_id, rating)
+INSERT INTO activity_ratings
+  (activity_id, rating)
 VALUES
   (1, 4.7),
   (1, 4.8),

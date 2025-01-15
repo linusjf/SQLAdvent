@@ -8,8 +8,8 @@ CREATE TABLE deliveries (
 );
 
 -- Insert data
-INSERT INTO
-  deliveries (delivery_date, gifts_delivered)
+INSERT INTO deliveries
+  (delivery_date, gifts_delivered)
 VALUES
   ('2024-12-20', 120),
   ('2024-12-21', 150),

@@ -10,8 +10,8 @@ CREATE TABLE snow (
 );
 
 -- Insert row records into the snow table
-INSERT INTO
-  snow (resort_name, location, snowfall_inches)
+INSERT INTO snow
+  (resort_name, location, snowfall_inches)
 VALUES
   ('Snowy Peaks', 'Colorado', 60),
   ('Winter Wonderland', 'Utah', 45),

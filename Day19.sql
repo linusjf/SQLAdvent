@@ -22,16 +22,16 @@ CREATE TABLE meal_log (
 );
 
 -- Insert data
-INSERT INTO
-  bears (bear_name, age)
+INSERT INTO bears
+  (bear_name, age)
 VALUES
   ('Snowball', 10),
   ('Frosty', 7),
   ('Iceberg', 15);
 
 -- Insert data
-INSERT INTO
-  meal_log (bear_id, food_type, food_weight_kg, meal_date)
+INSERT INTO meal_log
+  (bear_id, food_type, food_weight_kg, meal_date)
 VALUES
   (1, 'Seal', 30.0, '2024-12-01'),
   (2, 'Fish', 15.0, '2024-12-02'),

@@ -9,8 +9,8 @@ CREATE TABLE grinch_weight_log (
 );
 
 -- Insert data
-INSERT INTO
-  grinch_weight_log (day_of_month, weight)
+INSERT INTO grinch_weight_log
+  (day_of_month, weight)
 VALUES
   (1, 250.0),
   (2, 248.0),

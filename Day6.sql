@@ -20,8 +20,8 @@ CREATE TABLE tracking (
 );
 
 -- Insert row records into the polar_bears table
-INSERT INTO
-  polar_bears (bear_name, age)
+INSERT INTO polar_bears
+  (bear_name, age)
 VALUES
   ('Snowball', 10),
   ('Frosty', 7),
@@ -29,8 +29,8 @@ VALUES
   ('Chilly', 5);
 
 -- Insert row records into the tracking table
-INSERT INTO
-  tracking (bear_id, distance_km, tracking_date)
+INSERT INTO tracking
+  (bear_id, distance_km, tracking_date)
 VALUES
   (1, 25, '2024-12-01'),
   (2, 40, '2024-12-02'),

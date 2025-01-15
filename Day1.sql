@@ -11,8 +11,8 @@ CREATE TABLE IF NOT EXISTS rentals (
 CREATE INDEX IF NOT EXISTS idx_customer_name ON rentals (customer_name);
 
 -- Insert row records into the rentals table
-INSERT INTO
-  rentals (customer_name, activity, rental_date)
+INSERT INTO rentals
+  (customer_name, activity, rental_date)
 VALUES
   ('Emily', 'Skiing', '2024-01-01'),
   ('Michael', 'Snowboarding', '2024-01-02'),
@@ -23,5 +23,4 @@ VALUES
 
 SELECT
   *
-FROM
-  rentals;
+FROM rentals;

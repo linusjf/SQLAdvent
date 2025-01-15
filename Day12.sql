@@ -20,8 +20,8 @@ CREATE TABLE figurines (
 );
 
 -- Insert row records into the snow_globes table
-INSERT INTO
-  snow_globes (globe_name, volume_cm3, material)
+INSERT INTO snow_globes
+  (globe_name, volume_cm3, material)
 VALUES
   ('Winter Wonderland', 500, 'Glass'),
   ('Santas Workshop', 300, 'Plastic'),
@@ -29,8 +29,8 @@ VALUES
   ('Holiday Village', 600, 'Glass');
 
 -- Insert row records into the figurines table
-INSERT INTO
-  figurines (globe_id, figurine_type)
+INSERT INTO figurines
+  (globe_id, figurine_type)
 VALUES
   (1, 'Snowman'),
   (1, 'Tree'),

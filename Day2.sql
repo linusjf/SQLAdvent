@@ -8,8 +8,8 @@ CREATE TABLE IF NOT EXISTS gifts (
 );
 
 -- Insert row records into the gifts table
-INSERT INTO
-  gifts (gift_name, recipient, weight_kg)
+INSERT INTO gifts
+  (gift_name, recipient, weight_kg)
 VALUES
   ('Toy Train', 'John', 2.5),
   ('Chocolate Box', 'Alice', 0.8),

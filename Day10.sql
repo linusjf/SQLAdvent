@@ -10,8 +10,8 @@ CREATE TABLE resolutions (
 );
 
 -- Insert row records into the resolutions table
-INSERT INTO
-  resolutions (friend_name, resolution, is_completed)
+INSERT INTO resolutions
+  (friend_name, resolution, is_completed)
 VALUES
   ('Alice', 'Exercise daily', 1),
   ('Alice', 'Read 20 books', 0),

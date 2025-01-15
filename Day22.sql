@@ -19,8 +19,8 @@ CREATE TABLE guest_gifts (
 );
 
 -- Insert data
-INSERT INTO
-  guests (guest_name)
+INSERT INTO guests
+  (guest_name)
 VALUES
   ('Cindy Lou'),
   ('The Grinch'),
@@ -28,8 +28,8 @@ VALUES
   ('Mayor May Who');
 
 -- Insert data
-INSERT INTO
-  guest_gifts (guest_id, gift_name)
+INSERT INTO guest_gifts
+  (guest_id, gift_name)
 VALUES
   (1, 'Toy Train'),
   (1, 'Plush Bear'),

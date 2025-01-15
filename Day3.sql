@@ -10,8 +10,8 @@ CREATE TABLE IF NOT EXISTS candy_nutrition (
 );
 
 -- Insert row records into the candy_nutrition table
-INSERT INTO
-  candy_nutrition (candy_name, calories, candy_category)
+INSERT INTO candy_nutrition
+  (candy_name, calories, candy_category)
 VALUES
   ('Candy Cane', 200, 'Sweets'),
   ('Chocolate Bar', 250, 'Chocolate'),
@@ -23,5 +23,4 @@ VALUES
 
 SELECT
   *
-FROM
-  candy_nutrition;
+FROM candy_nutrition;
